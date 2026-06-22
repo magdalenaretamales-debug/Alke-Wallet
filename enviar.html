@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/enviar.css">
+
+  <title>Wallet - Enviar Dinero</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h2 class="text-info">Enviar Dinero</h2>
+
+   
+    <div class="form-group">
+      <label for="montoenviar">Transferencia:</label>
+      <input type="number" class="form-control" id="montoenviar" placeholder="Monto a enviar">
+    </div>
+
+   
+    <button type="button"class="btn btn-info"data-toggle="modal"data-target="#contactoModal">Agregar nuevo contacto</button>
+
+    <h3 class="text-info">Contactos</h3>
+
+    <ul id="contactList" class="list-group">
+      <li class="list-group-item">
+        <div class="contact-info">
+          <span class="contact-name">Magdalena Retamales</span><br>
+          <span class="contact-details">CBU: 123456789, Alias: Magda, Banco: Banco Estado</span>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="contact-info">
+          <span class="contact-name">Máximmo Neculman</span><br>
+          <span class="contact-details">CBU: 987654321, Apodo: Maxi, Banco: Banco Estado</span>
+        </div>
+      </li>
+    </ul>
+
+    <button type="button" id="btnenviar" class="btn btn-success mt-3">Enviar dinero</button>
+
+    <a href="menu.html" class="btn btn-secondary mt-3">Volver al Menú Principal</a>
+  </div>
+
+  <!-- SCRIPT BOOTSTRAP -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <div class="modal fade" id="contactoModal" tabindex="-1">
+
+ <div class="modal-dialog">
+
+<div class="modal-content">
+
+ <div class="modal-header">
+<h5 class="modal-title">Nuevo Contacto</h5>
+</div>
+<div class="modal-body">
+
+          <input id="nombre" class="form-control mb-2" placeholder="Nombre y apellido">
+
+          <input id="cbu" class="form-control mb-2" placeholder="CBU">
+
+          <input id="alias" class="form-control mb-2" placeholder="Alias">
+
+          <input id="banco" class="form-control mb-2" placeholder="Banco">
+
+        </div>
+
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Cerrar
+          </button>
+
+          <button type="button" id="btnguardarContacto" class="btn btn-primary">
+            Guardar
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src="./assets/js/enviar.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
